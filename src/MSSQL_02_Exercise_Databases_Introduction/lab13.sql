@@ -1,0 +1,29 @@
+
+CREATE DATABASE Movies;
+USE Movies;
+CREATE TABLE Directors (
+Id INT PRIMARY KEY IDENTITY ,
+DirectorName VARCHAR(30),
+Notes VARCHAR(MAX)
+);
+CREATE TABLE Genres (
+Id INT PRIMARY KEY IDENTITY ,
+GenreName VARCHAR(30),
+Notes VARCHAR(MAX)
+);
+CREATE TABLE Categories (
+Id INT PRIMARY KEY IDENTITY ,
+CategoryName VARCHAR(30),
+Notes VARCHAR(MAX)
+);
+CREATE TABLE Movies  (
+Id INT PRIMARY KEY IDENTITY ,
+Title VARCHAR(30),
+DirectorId INT,
+CopyrightYear DATE,
+Length TIME,
+GenreId INT,
+CategoryId INT,
+Rating REAL,
+Notes VARCHAR(MAX)
+);
